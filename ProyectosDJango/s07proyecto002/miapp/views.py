@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 # Create your views here.
 layout = """
@@ -52,6 +52,9 @@ def rango(request):
     return HttpResponse(layout + resultado)
 
 def rango2(request,a = 0,b = 100):
+    if a>b:
+        return redirect('rango2',a=b,b=a)
+
     resultado = f"""
         <h2> Rango con parámetros </h2>
         <h2> Número de [{a},{b}] </h2>
