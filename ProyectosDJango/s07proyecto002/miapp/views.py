@@ -15,7 +15,7 @@ layout = """
             <a href="/rango">Mostrar Numeros [a,b]</a>
         </li>
         <li>
-            <a href="/rango2/10/20">Mostrar Numeros [a,b] (Con Parámetro)</a>
+            <a href="/rango2">Mostrar Numeros [a,b] (Con Parámetro)</a>
         </li>
     </ul>
     <hr/>
@@ -51,7 +51,7 @@ def rango(request):
     resultado += "</ul>"
     return HttpResponse(layout + resultado)
 
-def rango2(request,a,b):
+def rango2(request,a = 0,b = 100):
     resultado = f"""
         <h2> Rango con parámetros </h2>
         <h2> Número de [{a},{b}] </h2>
