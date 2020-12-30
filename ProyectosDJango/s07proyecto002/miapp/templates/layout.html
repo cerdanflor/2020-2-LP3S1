@@ -46,15 +46,14 @@
         </div>
 
         <div id="content">
-            <h2 class="title">
-                Título de Contenido (De Prueba....)
-            </h2>
-            {% block content %}
-                <strong> 
-                    Contenido por defecto desde layout.html  
-                </strong>                    
-            {% endblock content %}
-
+            <div class="box">
+                
+                {% block content %}
+                    <strong> 
+                       Contenido por defecto desde layout.html  
+                    </strong>                    
+                {% endblock content %}
+            </div>
         </div>
         <footer>
             UNTELS - Lenguaje de Programación III &copy; Flor Cerdán
