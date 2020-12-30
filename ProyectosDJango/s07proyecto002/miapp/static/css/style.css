@@ -1,0 +1,82 @@
+/*Estilos Generales*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+/*Estilos de la Cabecera*/
+header{
+    width: 1212px;
+    height: 140px;
+    background-color: #23282B;
+    margin: 0 auto;
+}
+
+#logotipo{
+    width: 35%;
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#logotipo img{
+    display: block;
+    width: 60px;
+    float: left;
+    margin-top: 20px;
+}
+
+#logotipo h1{
+    display: block;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    color: #2ba977;
+}
+
+/*Estilos para Navegación*/
+
+/*Zona de menú*/
+nav{
+    width: 1250px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #1B1E1F;
+    border: 1px solid #333333;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 15px;
+}
+
+/* Zona de enlaces */
+nav ul{
+    list-style: none;
+    text-decoration: none;
+}
+nav ul li{
+    line-height: 40px;
+    float: left;
+}
+
+/*Para los hipervínculos*/
+nav ul li a{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #d1d4d6;
+}
+
+/*Efecto en los Hipervínculos*/
+nav ul li a:hover{
+    background: #2ba977;
+    box-shadow: 0px 0px 0px #444 inset;
+    color: white;
+    transition: all 300ms;
+}
