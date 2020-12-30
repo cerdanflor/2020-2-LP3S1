@@ -80,3 +80,33 @@ nav ul li a:hover{
     color: white;
     transition: all 300ms;
 }
+
+/*Efecto 3D para la barra del menú*/
+.barra{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.esquina-izquierda{
+    display: block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float: left;
+}
+
+.esquina-derecha{
+    display: block;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float: right;
+}
+
+/*Relleno del hueco*/
+.relleno-barra{
+    display: block;
+    width: 1210px;
+    height: 10px;
+    background: #2B2F30;
+    float: left;
+    
+}
