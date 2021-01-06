@@ -30,6 +30,7 @@ def index(request):
         'CARLOS GUSTAVO OYOLA SAAVEDRA',
         'GERARDO MANUEL CASTILLO TORDOYA'
     ]
+    
     return render(request, 'index.html', {
         'titulo': 'Inicio',
         'mensaje': 'Proyecto Web con DJango',

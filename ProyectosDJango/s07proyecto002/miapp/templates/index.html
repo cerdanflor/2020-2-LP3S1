@@ -30,7 +30,9 @@
         {% for estudiante in estudiantes %}
             <li>
                 {{forloop.counter}}.{{estudiante}}
-            </li>        
+            </li>    
+        {% empty %}
+            <p>No hay estudiantes registrados...</p>    
         {% endfor %}
     </ul>
 
