@@ -22,7 +22,10 @@ layout = """
 """
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html',{
+        'titulo':'Inicio',
+        'mensaje':'Proyecto Web con DJango (Desde el View)'
+    })
 
 def saludo(request):
     return render(request, 'saludo.html')

@@ -1,10 +1,16 @@
+<!-- COMENTARIO EN HTML...  -->
 {% extends 'layout.html' %}
 
 {% block title %}
-    Inicio
+    {{titulo}}
 {% endblock title %}
 
 {% block content %}
+{% comment 'Datos de la página Index' %}
+    En esta página se mostrará la bienvenida al sistema..... 
+    Además se mostrará XX YYY ZZZ
+{% endcomment %}
     <h1 class="title"> Página Index </h1>
     <h2> Usando Templates con Django </h2>
+    Mensaje: {{mensaje}}
 {% endblock content %}
