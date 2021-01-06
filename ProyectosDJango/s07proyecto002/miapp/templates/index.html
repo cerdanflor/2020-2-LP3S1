@@ -18,23 +18,7 @@
         <strong>La variable mensaje NO EXISTE</strong>
     {% endif %}
 
-    <p>
-        <strong> Estudiantes Registrados - (Método 01: Directa)</strong>
-    </p>
-    {{estudiantes}}
-
-    <p>
-        <strong> Estudiantes Registrados - (Método 02: Utilizando for)</strong>
-    </p>
-    <ul>
-        {% for estudiante in estudiantes %}
-            <li>
-                {{forloop.counter}}.{{estudiante}}
-            </li>    
-        {% empty %}
-            <p>No hay estudiantes registrados...</p>    
-        {% endfor %}
-    </ul>
+    {% include 'listado_estudiantesregistrados.html' with encabezado="Estudiantes Registrados" %}
 
     <p>Año: 2021</p>
 {% endblock content %}
