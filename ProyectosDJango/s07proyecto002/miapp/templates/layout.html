@@ -25,16 +25,16 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/inicio">Inicio</a>
+                    <a href="{% url 'inicio' %}">Inicio</a>
                 </li>
                 <li>
-                    <a href="/saludo">Mensaje de Saludo</a>
+                    <a href="{% url 'saludo' %}">Mensaje de Saludo</a>
                 </li>
                 <li>
-                    <a href="/rango">Mostrar Numeros [a,b]</a>
+                    <a href="{% url 'rango' %}">Mostrar Numeros [a,b]</a>
                 </li>
                 <li>
-                    <a href="/rango2">Mostrar Numeros [a,b] (Con Parámetro)</a>
+                    <a href="{% url 'rango2' %}">Mostrar Numeros [a,b] (Con Parámetro)</a>
                 </li>
             </ul>
         </nav>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <footer>
-            UNTELS - Lenguaje de Programación III &copy; Flor Cerdán
+            UNTELS - Lenguaje de Programación III &copy; Flor Cerdán - {% now "d/m/y h:m:s" %}
         </footer>
     </body>
 </html>
