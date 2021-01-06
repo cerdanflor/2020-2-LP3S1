@@ -6,6 +6,15 @@
     text-decoration: none;
 }
 
+.box p, .box h2, .box h3, .box ul{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.box ul, .box ol{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
 body{
     background-color: #f2f2f2;
 }

@@ -23,9 +23,17 @@ layout = """
 
 
 def index(request):
+    estudiantes = [
+        'SERGIO DANIEL VITE COCHACHIN',
+        'ANTHONY GERARDO BENDEZU SANTISTEBAN',
+        'CRISTIAN ALEXIS CHIPANA HUAMAN',
+        'CARLOS GUSTAVO OYOLA SAAVEDRA',
+        'GERARDO MANUEL CASTILLO TORDOYA'
+    ]
     return render(request, 'index.html', {
         'titulo': 'Inicio',
-        'mensaje': 'Proyecto Web con DJango'
+        'mensaje': 'Proyecto Web con DJango',
+        'estudiantes': estudiantes
     })
 
 
