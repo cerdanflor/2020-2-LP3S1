@@ -25,7 +25,10 @@
                     </strong>
                 {% endif %}
                 <p>
-                    {{articulo.contenido}}
+                    {{articulo.contenido}}<br>
+                    <a href="{% url 'eliminar_articulo' id=articulo.id %}">
+                        Eliminar
+                    </a>
                 </p>
             </li>
         {% endfor %}

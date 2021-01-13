@@ -30,4 +30,5 @@ urlpatterns = [
     path('buscar_articulo',views.buscar_articulo, name="buscar_articulo"),
     path('editar_articulo/<int:id>',views.editar_articulo, name="editar_articulo"),
     path('listar_articulos', views.listar_articulos, name="listar_articulos"),
+    path('eliminar_articulo/<int:id>',views.eliminar_articulo, name="eliminar_articulo"),
 ]

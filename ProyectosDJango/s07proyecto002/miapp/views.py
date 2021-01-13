@@ -107,8 +107,13 @@ def editar_articulo(request, id):
     return HttpResponse(f"Articulo Editado: {articulo.titulo} - {articulo.contenido}")
 
 def listar_articulos(request):
-    articulos = Articulo.objects.all
+    articulos = Articulo.objects.order_by('titulo')
     return render(request, 'listar_articulos.html',{
         'articulos': articulos,
         'titulo': 'Listado de Artículos'
     })
+
+def eliminar_articulo(request, id):
+    articulo = Articulo.objects.get(pk=id)
+    articulo.delete()
+    return redirect('listar_articulos')
