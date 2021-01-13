@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
+from miapp.models import Articulo
 
 # Create your views here.
 layout = """
@@ -73,3 +74,12 @@ def rango2(request, a=0, b=100):
 
     resultado += "</ul>"
     return HttpResponse(layout + resultado)
+
+def crear_articulo(request, titulo, contenido, publicado):
+    articulo = Articulo(
+        titulo = titulo,
+        contenido = contenido,
+        publicado = publicado
+    )
+    articulo.save()
+    return HttpResponse(f"Artículo Creado: {articulo.titulo} - {articulo.contenido}")
