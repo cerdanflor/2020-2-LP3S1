@@ -106,3 +106,9 @@ def editar_articulo(request, id):
     articulo.save()
     return HttpResponse(f"Articulo Editado: {articulo.titulo} - {articulo.contenido}")
 
+def listar_articulos(request):
+    articulos = Articulo.objects.all
+    return render(request, 'listar_articulos.html',{
+        'articulos': articulos,
+        'titulo': 'Listado de Artículos'
+    })
