@@ -108,10 +108,13 @@ def editar_articulo(request, id):
     return HttpResponse(f"Articulo Editado: {articulo.titulo} - {articulo.contenido}")
 
 def listar_articulos(request):
+    articulos = Articulo.objects.all()
+    """
     articulos = Articulo.objects.filter(
         Q(titulo__contains="Py") |
         Q(titulo__contains="Hab")
     )
+    """
     return render(request, 'listar_articulos.html',{
         'articulos': articulos,
         'titulo': 'Listado de Artículos'
@@ -123,13 +126,20 @@ def eliminar_articulo(request, id):
     return redirect('listar_articulos')
 
 def save_articulo(request):
-    articulo = Articulo(
-        titulo = titulo,
-        contenido = contenido,
-        publicado = publicado
-    )
-    articulo.save()
-    return HttpResponse(f"Articulo Creado: {articulo.titulo} - {articulo.contenido}")
+    if request.method == 'GET':
+        titulo = request.GET['titulo']
+        contenido = request.GET['contenido']
+        publicado = request.GET['publicado']
+
+        articulo = Articulo(
+            titulo = titulo,
+            contenido = contenido,
+            publicado = publicado
+        )
+        articulo.save()
+        return HttpResponse(f"Articulo Creado: {articulo.titulo} - {articulo.contenido}")
+    else:
+        return HttpResponse("<h2> No se ha podido registrar el artículo </h2>")
 
 def create_articulo(request):
     return render(request, 'create_articulo.html')
