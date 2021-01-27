@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% load filters %}
+
+{% block title %}
+    Formulario en DJango
+{% endblock %}
+{% block content %}
+    <H1 class="title"> 
+        Formulario en DJango
+    </H1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Agregar" />
+
+    </form>
+{% endblock %}

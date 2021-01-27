@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Articulo
 from django.db.models import Q
+from miapp.forms import FormArticulo
 
 # Create your views here.
 layout = """
@@ -145,3 +146,25 @@ def save_articulo(request):
 
 def create_articulo(request):
     return render(request, 'create_articulo.html')
+
+def create_full_articulo(request):
+    if request.method == 'POST':
+        formulario = FormArticulo(request.POST)
+        if formulario.is_valid():
+            data_form = formulario.cleaned_data
+            titulo = data_form.get('titulo')
+            contenido = data_form['contenido']
+            publicado = data_form['publicado']
+            articulo = Articulo(
+                titulo = titulo,
+                contenido = contenido,
+                publicado = publicado
+            )
+            articulo.save()
+            return redirect('listar_articulos')
+            #return HttpResponse(articulo.titulo + ' - ' + articulo.contenido + ' - ' + str(articulo.publicado))
+    else:
+        formulario = FormArticulo()        
+    return render(request, 'create_full_articulo.html',{
+        'form': formulario
+    })
