@@ -177,6 +177,14 @@ nav ul li a:hover{
     color: red;
 }
 
+.message{
+    padding: 20px;
+    background: #1f7e58;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .box form input[type="submit"]:hover,
 .box form input[type="button"]:hover,
 .box form button:hover{

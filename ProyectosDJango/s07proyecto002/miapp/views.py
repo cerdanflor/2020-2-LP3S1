@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Articulo
 from django.db.models import Q
 from miapp.forms import FormArticulo
+from django.contrib import messages
 
 # Create your views here.
 layout = """
@@ -161,6 +162,10 @@ def create_full_articulo(request):
                 publicado = publicado
             )
             articulo.save()
+
+            #Es para crear un mensaje Flash (Solo se muestra una vez)
+            messages.success(request,f'Se agregó correctamente el artículo {articulo.id}')
+
             return redirect('listar_articulos')
             #return HttpResponse(articulo.titulo + ' - ' + articulo.contenido + ' - ' + str(articulo.publicado))
     else:
