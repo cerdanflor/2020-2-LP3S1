@@ -8,4 +8,20 @@
     <H1 class="title"> 
         Formulario en DJango
     </H1>
+    <form action="{% url 'save_articulo' %}" method="GET">
+        <label for="titulo"> Título </label>
+        <input type="text" name="titulo" />
+
+        <label for="contenido"> Contenido </label>
+        <textarea name="contenido"></textarea>
+
+        <label for="publicado"> ¿Publicado? </label>
+        <select name="publicado">
+            <option value="1">Si</option>
+            <option value="0">No</option>
+        </select>
+
+        <input type="submit" value="Agregar" />
+
+    </form>
 {% endblock %}
