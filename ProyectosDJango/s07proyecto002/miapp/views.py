@@ -128,6 +128,8 @@ def eliminar_articulo(request, id):
 def save_articulo(request):
     if request.method == 'GET':
         titulo = request.GET['titulo']
+        if len(titulo)<=5:
+            return HttpResponse("<h2>El tamaño del título es pequeño, intente nuevamente</h2>")
         contenido = request.GET['contenido']
         publicado = request.GET['publicado']
 
