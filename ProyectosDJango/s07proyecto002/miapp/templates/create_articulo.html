@@ -8,7 +8,8 @@
     <H1 class="title"> 
         Formulario en DJango
     </H1>
-    <form action="{% url 'save_articulo' %}" method="GET">
+    <form action="{% url 'save_articulo' %}" method="POST">
+        {% csrf_token %}
         <label for="titulo"> Título </label>
         <input type="text" name="titulo" />
 

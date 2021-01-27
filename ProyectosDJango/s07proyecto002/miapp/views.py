@@ -126,12 +126,12 @@ def eliminar_articulo(request, id):
     return redirect('listar_articulos')
 
 def save_articulo(request):
-    if request.method == 'GET':
-        titulo = request.GET['titulo']
+    if request.method == 'POST':
+        titulo = request.POST['titulo']
         if len(titulo)<=5:
             return HttpResponse("<h2>El tamaño del título es pequeño, intente nuevamente</h2>")
-        contenido = request.GET['contenido']
-        publicado = request.GET['publicado']
+        contenido = request.POST['contenido']
+        publicado = request.POST['publicado']
 
         articulo = Articulo(
             titulo = titulo,
