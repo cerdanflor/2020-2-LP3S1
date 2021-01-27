@@ -173,6 +173,10 @@ nav ul li a:hover{
     transition: 300 ms all;
 }
 
+.rojo{
+    color: red;
+}
+
 .box form input[type="submit"]:hover,
 .box form input[type="button"]:hover,
 .box form button:hover{

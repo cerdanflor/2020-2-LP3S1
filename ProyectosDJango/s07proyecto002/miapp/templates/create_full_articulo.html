@@ -8,6 +8,12 @@
     <H1 class="title"> 
         Formulario en DJango
     </H1>
+    {% if form.errors %}
+        <strong class="rojo">
+            Hay errores en el Formulario
+            {{form.errors}}
+        </strong>
+    {% endif %}
     <form action="" method="POST">
         {% csrf_token %}
         {{form.as_p}}
