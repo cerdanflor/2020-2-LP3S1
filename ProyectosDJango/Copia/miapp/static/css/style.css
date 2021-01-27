@@ -1,0 +1,201 @@
+/*Estilos Generales*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.box p, .box h2, .box h3, .box ul{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.box ul, .box ol{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+/*Estilos de la Cabecera*/
+header{
+    width: 1212px;
+    height: 140px;
+    background-color: #23282B;
+    margin: 0 auto;
+}
+
+#logotipo{
+    width: 35%;
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#logotipo img{
+    display: block;
+    width: 60px;
+    float: left;
+    margin-top: 20px;
+}
+
+#logotipo h1{
+    display: block;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    color: #2ba977;
+}
+
+/*Estilos para Navegación*/
+
+/*Zona de menú*/
+nav{
+    width: 1250px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #1B1E1F;
+    border: 1px solid #333333;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 15px;
+}
+
+/* Zona de enlaces */
+nav ul{
+    list-style: none;
+    text-decoration: none;
+}
+nav ul li{
+    line-height: 40px;
+    float: left;
+}
+
+/*Para los hipervínculos*/
+nav ul li a{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #d1d4d6;
+}
+
+/*Efecto en los Hipervínculos*/
+nav ul li a:hover{
+    background: #2ba977;
+    box-shadow: 0px 0px 0px #444 inset;
+    color: white;
+    transition: all 300ms;
+}
+
+/*Efecto 3D para la barra del menú*/
+.barra{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.esquina-izquierda{
+    display: block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float: left;
+}
+
+.esquina-derecha{
+    display: block;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float: right;
+}
+
+/*Relleno del hueco*/
+.relleno-barra{
+    display: block;
+    width: 1210px;
+    height: 10px;
+    background: #2B2F30;
+    float: left;
+    
+}
+
+/*Estilos para el contenido*/
+
+#content{
+    width: 1212px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.box{
+    background: white;
+    width: 95%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+ 
+.box form{
+    width: 40%;
+}
+ 
+.box form input, .box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+ 
+.box form input[type="text"], 
+.box form textarea,
+.box form select{
+    width: 100%;
+    margin-bottom: 10px;
+}
+ 
+.box form select{
+    width: 100px;
+    padding: 5px;
+}
+ 
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid #444;
+    color: white;
+    transition: 300ms all;
+ 
+}
+ 
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #1f7e58;
+}    
+.title{
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 4px;
+    margin-top: 5px;
+}
+
+/*Estilos para el Footer*/
+footer{
+    width: 1250px;
+    background-color: #1B1E1F;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
+}

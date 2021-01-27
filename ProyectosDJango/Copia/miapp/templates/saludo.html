@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}
+    {{titulo}}
+
+{% endblock title %}
+
+{%  block content %}
+    <h1 class="title">Bienvenidos a la Untels</h1> 
+    <h2>Facultad de Ingenieria</h2> 
+    <h3>EP Ingenieria de Sistemas</h3> 
+    <h4>{{autor_saludo}}</h4>
+    {% load filters %}
+        {{"Iniciando Curso LP3"|saludo|safe}}
+    <p>
+        {{block.super}}
+    </p>
+{% endblock content %}

@@ -1,0 +1,24 @@
+<!-- COMENTARIO EN HTML...  -->
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{titulo}}
+{% endblock title %}
+
+{% block content %}
+{% comment 'Datos de la página Index' %}
+    En esta página se mostrará la bienvenida al sistema..... 
+    Además se mostrará XX YYY ZZZ
+{% endcomment %}
+    <h1 class="title"> Página {{titulo}} </h1>
+    <p>Usando Templates con Django </p>
+    {% if mensaje %}
+        <p>Mensaje: {{mensaje}}</p>
+    {% else %}
+        <strong>La variable mensaje NO EXISTE</strong>
+    {% endif %}
+
+    {% include 'listado_estudiantesregistrados.html' with encabezado="Estudiantes Registrados" %}
+    {% include 'filtros.html' with encabezado="Uso de Filtros" %}    
+    <p>Año: 2021</p>
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{titulo}}
+{% endblock title %}
+
+{% block content %}
+    <h1 class="title"> {{titulo}} </h1>
+    <ul>
+        {% for articulo in articulos %}
+            <li>
+                <h4>
+                    {{articulo.id}} - {{articulo.titulo}}
+                </h4>
+                <span>
+                    Creado: {{articulo.creado}}
+                </span>
+                {% if articulo.publicado %}
+                    <strong>
+                        Publicado
+                    </strong>
+                {% else %}
+                    <strong>
+                        No Publicado / En Revisión
+                    </strong>
+                {% endif %}
+                <p>
+                    {{articulo.contenido}}<br>
+                    <a href="{% url 'eliminar_articulo' id=articulo.id %}">
+                        Eliminar
+                    </a>
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
