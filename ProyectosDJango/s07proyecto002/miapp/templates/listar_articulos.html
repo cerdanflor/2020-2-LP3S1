@@ -14,13 +14,19 @@
         {% endfor %}
     {% endif %}
 
-    <ul>
-        {% for articulo in articulos %}
-            <li>
-                <h4>
-                    {{articulo.id}} - {{articulo.titulo}}
-                </h4>
-                <span>
+    
+    {% for articulo in articulos %}
+        <div class="articulo-item">
+            {% if articulo.imagen != 'null' %}
+                <div class="image">
+                    <img src="{{articulo.imagen.url}}" />
+                </div>
+            {% endif %}
+            <div class="data">
+                <h2>
+                    {{articulo.titulo}}
+                </h2>
+                <span class="date">
                     Creado: {{articulo.creado}}
                 </span>
                 {% if articulo.publicado %}
@@ -34,11 +40,14 @@
                 {% endif %}
                 <p>
                     {{articulo.contenido}}<br>
-                    <a href="{% url 'eliminar_articulo' id=articulo.id %}">
+                    <a href="{% url 'eliminar_articulo' id=articulo.id %}" class="btn btn-delete">
                         Eliminar
                     </a>
                 </p>
-            </li>
-        {% endfor %}
-    </ul>
+            </div>
+            <div class="clearfix">
+            </div>
+        </div>    
+    {% endfor %}
+    
 {% endblock content %}

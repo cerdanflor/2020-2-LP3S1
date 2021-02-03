@@ -15,6 +15,11 @@
     margin-bottom: 10px;
 }
 
+.clearfix{
+    clear: both;
+    float: none;
+}
+
 body{
     background-color: #f2f2f2;
 }
@@ -199,6 +204,57 @@ nav ul li a:hover{
     margin-bottom: 4px;
     margin-top: 5px;
 }
+
+/*Estilos para el listado con image*/
+.articulo-item{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 15px;
+    border-bottom: 1px solid black;
+    clear: both;
+}
+.articulo-item .image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+}
+
+.articulo-item .image img{
+    height: 200px;
+}
+
+.articulo-item .data{
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+}
+
+.articulo-item h2{
+    display: block;
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.articulo-item span.date{
+    display: block;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+}
+.btn{
+    padding: 10px;
+    background: rgb(207, 48, 48);
+    color: white;
+    border: 1px solid black;
+    display: block;
+    margin-top: 15px;
+    width: 100px;
+    text-align: center;
+}
+
+
+
 
 /*Estilos para el Footer*/
 footer{
